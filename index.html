@@ -31,8 +31,8 @@
 		}
 
 		.wrapper {
-			min-width: 100vw;
-			min-height: 100vh;
+			/* min-width: 100vw;
+			min-height: 100vh; */
 			height: 100%;
 			width: 100%;
 		}
@@ -120,31 +120,43 @@
 </head>
 
 <body>
-	<input type="checkbox" id="btnControl" />
-	<label class="btn" for="btnControl">
-		<div class="wrapper">
-			<div>
-				<img src="sketch.jpg" width="100px"></img>
-				<small><i></i></small>
-			</div>
-			<div>I am <b>Itamar Chinn</b>, a PhD student in <a class="a" href="https://www.regina.csail.mit.edu">Regina
-					Barzilay's
-					group</a> at <a class="a" href="https://www.csail.mit.edu">MIT's CSAIL</a>. I work on applying
-				machine
-				learning to the life sciences.
-				<br>
-				<br>I am especially interested in applying graph neural
-				networks and computer vision to cellular biology, with a particular interest in condensates and cellular
-				metabolism. Feel free to reach out itamarc [at] mit [dot] edu
-			</div>
-			<div>
-				<a href="www.twitter.com/itamarchinn" class="fa fa-twitter"></a>
-				<a href="www.linkedin.com/in/itamarchinn" class="fa fa-linkedin"></a>
-				<a href="www.github.com/itamarchinn" class="fa fa-github"></a>
-			</div>
-			<div class="copyright">Itamar Chinn &copy 2022</div>
+	<!-- <input type="checkbox" id="btnControl" /> -->
+	<!-- <label class="btn" for="btnControl"> -->
+	<div class="wrapper">
+		<div>
+			<img src="sketch.jpg" width="100px"></img>
+			<small><i></i></small>
 		</div>
-	</label>
+		<div>I am <b>Itamar Chinn</b>, a PhD student in <a class="a" href="https://www.regina.csail.mit.edu">Regina
+				Barzilay's
+				group</a> at <a class="a" href="https://www.csail.mit.edu">MIT's CSAIL</a>. I work on applying
+			machine
+			learning to the life sciences.
+			<br>
+			<br>I am especially interested in applying graph neural
+			networks and computer vision to cellular biology, with a particular interest in condensates and
+			cellular
+			metabolism. Feel free to reach out itamarc [at] mit [dot] edu
+		</div>
+		<div>
+			<a href="www.twitter.com/itamarchinn" class="fa fa-twitter"></a>
+			<a href="www.linkedin.com/in/itamarchinn" class="fa fa-linkedin"></a>
+			<a href="www.github.com/itamarchinn" class="fa fa-github"></a>
+		</div>
+		<div class="copyright">Itamar Chinn &copy 2022</div>
+	</div>
+	<!-- </label> -->
+
+	<script>
+		function changed() {
+			document.getElementById("exp").classList.add("fa_border");
+		};
+	</script>
+	<div id="exp">
+		<button onclick=" changed()">try it</button>
+		<p onclick="changed()">hello world</p>
+
+	</div>
 </body>
 </p>
 
