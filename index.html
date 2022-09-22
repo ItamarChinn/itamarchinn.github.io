@@ -1,40 +1,151 @@
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<style>
-			@media only screen and (max-width: 600px) {
-				img {
-					width: 100%;
-				}
+
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		@media only screen and (max-width: 600px) {
+			img {
+				width: 100%;
 			}
-			a:visited {
-				color:  blue;
-			}
-			body {
-				padding: 2em;
-				background-color: #efefef;
-				font-family:  Arial;
-			}
-			div {
-				padding: 1em 1em;
-				max-width: 600px;
-				margin: 0 auto;
-			}
-			img, small {
-				display:  block;
-			}
-		</style>
-	</head>
-	<body>
-		<div>
-			<img src="sketch.jpg" width="450px"></img>
-			<small><i></i></small>
+		}
+
+		a:visited {
+			color: blue;
+		}
+
+		body {
+			padding: 5em;
+			background-color: #FAF9F6;
+			font-family: Palatino;
+			font-size: 20px;
+			height: 100%;
+			width: 100%;
+		}
+
+		div {
+			padding: 1em 1em;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		.wrapper {
+			min-width: 100vw;
+			min-height: 100vh;
+			height: 100%;
+			width: 100%;
+		}
+
+		img,
+		small {
+			display: block;
+		}
+
+		.fa {
+			padding: 0px;
+			font-size: 20px;
+			width: 25px;
+			text-align: center;
+			text-decoration: none;
+			color: black
+		}
+
+		.fa_border {
+			border-radius: 25px;
+			border: 2px solid #73AD21;
+			padding: 20px;
+		}
+
+		.copyright {
+			text-align: left;
+			font-size: 10px;
+			color: #999;
+		}
+
+		a:link {
+			color: #000000;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: deeppink;
+			text-decoration: none;
+		}
+
+		#btnControl {
+			display: none;
+		}
+
+		/* .btn {
+			width: 60px;
+			height: 20px;
+			background: silver;
+			border-radius: 5px;
+			padding: 1px 3px;
+			box-shadow: 1px 1px 1px #000;
+			display: block;
+			text-align: center;
+			background-image: linear-gradient(to bottom, #f4f5f5, #dfdddd);
+			font-family: arial;
+			font-size: 12px;
+			line-height: 20px;
+		}
+
+		.btn:hover {
+			background-image: linear-gradient(to bottom, #c3e3fa, #a5defb);
+		}
+
+
+		.btn:active {
+			margin-left: 1px 1px 0;
+			box-shadow: -1px -1px 1px #000;
+			outline: 1px solid black;
+			background-image: linear-gradient(to top, #f4f5f5, #dfdddd);
+		} */
+
+		/* #btnControl:checked+label {
+			width: 70px;
+			height: 74px;
+			line-height: 74px;
+		} */
+
+
+		#btnControl:checked+label>div {
+			background-color: yellow;
+			color: deeppink;
+			font-style: bold;
+		}
+	</style>
+</head>
+
+<body>
+	<input type="checkbox" id="btnControl" />
+	<label class="btn" for="btnControl">
+		<div class="wrapper">
+			<div>
+				<img src="sketch.jpg" width="100px"></img>
+				<small><i></i></small>
+			</div>
+			<div>I am <b>Itamar Chinn</b>, a PhD student in <a class="a" href="https://www.regina.csail.mit.edu">Regina
+					Barzilay's
+					group</a> at <a class="a" href="https://www.csail.mit.edu">MIT's CSAIL</a>. I work on applying
+				machine
+				learning to the life sciences.
+				<br>
+				<br>I am especially interested in applying graph neural
+				networks and computer vision to cellular biology, with a particular interest in condensates and cellular
+				metabolism. Feel free to reach out itamarc [at] mit [dot] edu
+			</div>
+			<div>
+				<a href="www.twitter.com/itamarchinn" class="fa fa-twitter"></a>
+				<a href="www.linkedin.com/in/itamarchinn" class="fa fa-linkedin"></a>
+				<a href="www.github.com/itamarchinn" class="fa fa-github"></a>
+			</div>
+			<div class="copyright">Itamar Chinn &copy 2022</div>
 		</div>
-		<div>My name is Itamar. I am a Phd student in Regina Barzilay's group at MIT's CSAIL.</div>
-		<div>I work on applying ML to the life sciences</div>
-		<div>Feel free to reach out itamarc [at] mit [dot] edu</div>
-		    <!--
-	      <div>If you are interested in being tutored, please fill out <a href="https://forms.gle/aovFqLwtFN88hpyn6">this form.</a> If you would like me to consider implementing a specific paper, please fill out <a href="https://forms.gle/Dtrxc6CceHEcqS6X6">this form.</a></div>
-		    -->
-	</body>
+	</label>
+</body>
+</p>
+
 </html>
