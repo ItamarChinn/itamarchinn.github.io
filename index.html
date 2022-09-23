@@ -16,12 +16,13 @@
 		}
 
 		body {
+			display: flex;
 			padding: 5em;
+			/* background-color: #FAF9F6; */
 			background-color: #FAF9F6;
 			font-family: Palatino;
 			font-size: 20px;
-			height: 100%;
-			width: 100%;
+
 		}
 
 		div {
@@ -31,8 +32,6 @@
 		}
 
 		.wrapper {
-			/* min-width: 100vw;
-			min-height: 100vh; */
 			height: 100%;
 			width: 100%;
 		}
@@ -51,12 +50,6 @@
 			color: black
 		}
 
-		.fa_border {
-			border-radius: 25px;
-			border: 2px solid #73AD21;
-			padding: 20px;
-		}
-
 		.copyright {
 			text-align: left;
 			font-size: 10px;
@@ -65,53 +58,24 @@
 
 		a:link {
 			color: #000000;
-			text-decoration: none;
+			text-decoration: underline;
 		}
 
 		a:hover {
 			color: deeppink;
-			text-decoration: none;
+			/* text-decoration: none; */
 		}
 
-		#btnControl {
-			display: none;
+		.a_color {
+			color: blue;
+			text-decoration: underline;
 		}
 
-		/* .btn {
-			width: 60px;
-			height: 20px;
-			background: silver;
-			border-radius: 5px;
-			padding: 1px 3px;
-			box-shadow: 1px 1px 1px #000;
-			display: block;
-			text-align: center;
-			background-image: linear-gradient(to bottom, #f4f5f5, #dfdddd);
-			font-family: arial;
-			font-size: 12px;
-			line-height: 20px;
+		.a_color:hover {
+			color: black
 		}
 
-		.btn:hover {
-			background-image: linear-gradient(to bottom, #c3e3fa, #a5defb);
-		}
-
-
-		.btn:active {
-			margin-left: 1px 1px 0;
-			box-shadow: -1px -1px 1px #000;
-			outline: 1px solid black;
-			background-image: linear-gradient(to top, #f4f5f5, #dfdddd);
-		} */
-
-		/* #btnControl:checked+label {
-			width: 70px;
-			height: 74px;
-			line-height: 74px;
-		} */
-
-
-		#btnControl:checked+label>div {
+		.change_color {
 			background-color: yellow;
 			color: deeppink;
 			font-style: bold;
@@ -119,17 +83,18 @@
 	</style>
 </head>
 
-<body>
+<body id="exp">
 	<!-- <input type="checkbox" id="btnControl" /> -->
 	<!-- <label class="btn" for="btnControl"> -->
 	<div class="wrapper">
-		<div>
-			<img src="sketch.jpg" width="100px"></img>
-			<small><i></i></small>
+		<div style="display:flex; flex-flow:row;">
+			<img src="sketch.png" width="100px"></img>
+
 		</div>
-		<div>I am <b>Itamar Chinn</b>, a PhD student in <a class="a" href="https://www.regina.csail.mit.edu">Regina
+		<div>I am <b style="font-size: 21px">Itamar Chinn</b>, a PhD student in <a id="exp4" class="a"
+				href="https://www.regina.csail.mit.edu">Regina
 				Barzilay's
-				group</a> at <a class="a" href="https://www.csail.mit.edu">MIT's CSAIL</a>. I work on applying
+				group</a> at <a id="exp5" class="a" href="https://www.csail.mit.edu">MIT's CSAIL</a>. I work on applying
 			machine
 			learning to the life sciences.
 			<br>
@@ -138,10 +103,14 @@
 			cellular
 			metabolism. Feel free to reach out itamarc [at] mit [dot] edu
 		</div>
-		<div>
-			<a href="www.twitter.com/itamarchinn" class="fa fa-twitter"></a>
-			<a href="www.linkedin.com/in/itamarchinn" class="fa fa-linkedin"></a>
-			<a href="www.github.com/itamarchinn" class="fa fa-github"></a>
+		<div style="display:flex;justify-content:space-between">
+			<span style="display:flex;justify-content:flex-start">
+				<a id="exp2" href="www.twitter.com/itamarchinn" class="fa fa-twitter" style="text-decoration:none"></a>
+				<a id="exp3" href="www.linkedin.com/in/itamarchinn" class="fa fa-linkedin"
+					style="text-decoration:none"></a>
+				<a id="exp4" href="www.github.com/itamarchinn" class="fa fa-github" style="text-decoration:none"></a>
+			</span>
+			<button onclick=" changed()">&#129412;</button>
 		</div>
 		<div class="copyright">Itamar Chinn &copy 2022</div>
 	</div>
@@ -149,14 +118,27 @@
 
 	<script>
 		function changed() {
-			document.getElementById("exp").classList.add("fa_border");
+			if (!document.getElementById("exp").classList.contains("change_color")) {
+				document.getElementById("exp").classList.add("change_color");
+			} else {
+				document.getElementById("exp").classList.remove("change_color");
+			}
+			if (document.getElementById("exp2").style.color != "deeppink") {
+				document.getElementById("exp2").style["color"] = "deeppink";
+				document.getElementById("exp3").style["color"] = "deeppink";
+				document.getElementById("exp4").style["color"] = "deeppink";
+				document.getElementById("exp5").style["color"] = "deeppink";
+				document.getElementById("exp6").style["color"] = "deeppink";
+			} else {
+				document.getElementById("exp2").style["color"] = "black";
+				document.getElementById("exp3").style["color"] = "black";
+				document.getElementById("exp4").style["color"] = "black";
+				document.getElementById("exp5").style["color"] = "black";
+				document.getElementById("exp6").style["color"] = "black";
+			}
 		};
 	</script>
-	<div id="exp">
-		<button onclick=" changed()">try it</button>
-		<p onclick="changed()">hello world</p>
 
-	</div>
 </body>
 </p>
 
