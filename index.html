@@ -7,7 +7,110 @@
 	<style>
 		@media only screen and (max-width: 600px) {
 			img {
+				width: 50%%;
+			}
+
+			body {
+				display: flex;
+				/* padding: 5em; */
+				background-color: #FAF9F6;
+				font-family: Palatino;
+				/* font-size: 20px; */
+			}
+
+			/* .body_night {
+				display: flex;
+				padding: 5em;
+				background-color: #000000a0;
+				font-family: Palatino;
+				font-size: 20px;
+				color: #FAF9F6;
+			} */
+			.image_container {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			div {
+				/* padding: 1em 1em; */
+				/* max-width: 1000px; */
+				margin: 0 auto;
+				/* width: 100%; */
+			}
+
+			.wrapper {
+				height: 100%;
 				width: 100%;
+			}
+
+			.fa {
+				/* padding: 0px; */
+				/* font-size: 20px; */
+				width: 25px;
+				text-align: center;
+				text-decoration: none;
+				color: black;
+			}
+
+			/* .fa_night {
+				padding: 0px;
+				font-size: 20px;
+				width: 25px;
+				text-align: center;
+				text-decoration: none;
+				color: #FAF9F6 !important;
+			} */
+
+			.copyright {
+				text-align: left;
+				font-size: 10px;
+				color: #999;
+			}
+
+			a:link {
+				color: black;
+				text-decoration: underline;
+			}
+
+			a:hover {
+				color: deeppink !important;
+				/* text-decoration: none; */
+			}
+
+			.a {
+				color: black !important;
+			}
+
+			.a_night {
+				color: white !important;
+			}
+
+			a:visited {
+				color: blue;
+			}
+
+			.a_color {
+				color: deeppink !important;
+			}
+
+			.a_color:hover {
+				color: black
+			}
+
+			.button:hover {
+				background-color: aqua;
+			}
+
+			.button:active {
+				background-color: aqua;
+			}
+
+
+			.change_color {
+				background-color: yellow;
+				color: deeppink;
+				font-style: bold;
 			}
 		}
 
@@ -117,7 +220,7 @@
 
 <body id="exp">
 	<div class="wrapper">
-		<div style="display:flex; flex-flow:row;">
+		<div class="img_container" style="display:flex; flex-flow:row;">
 			<img id="img" src="sketch.png" width="100px"></img>
 		</div>
 		<div>I am <b style="font-size: 21px">Itamar Chinn</b>, a PhD student in <a id="exp5" class="a"
@@ -131,7 +234,7 @@
 			cellular
 			metabolism. Feel free to reach out itamarc [at] mit [dot] edu.
 		</div>
-		<div style="display:flex;justify-content:space-between">
+		<div class="image_container" style="display:flex;justify-content:space-between">
 			<span style="display:flex;justify-content:flex-start">
 				<a id="exp3" href="https://www.linkedin.com/in/itamarchinn" class="fa fa-linkedin a"
 					style="text-decoration:none"></a>
