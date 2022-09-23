@@ -11,18 +11,21 @@
 			}
 		}
 
-		a:visited {
-			color: blue;
-		}
-
 		body {
 			display: flex;
 			padding: 5em;
-			/* background-color: #FAF9F6; */
 			background-color: #FAF9F6;
 			font-family: Palatino;
 			font-size: 20px;
+		}
 
+		.body_night {
+			display: flex;
+			padding: 5em;
+			background-color: #000000a0;
+			font-family: Palatino;
+			font-size: 20px;
+			color: #FAF9F6;
 		}
 
 		div {
@@ -47,7 +50,16 @@
 			width: 25px;
 			text-align: center;
 			text-decoration: none;
-			color: black
+			color: black;
+		}
+
+		.fa_night {
+			padding: 0px;
+			font-size: 20px;
+			width: 25px;
+			text-align: center;
+			text-decoration: none;
+			color: #FAF9F6 !important;
 		}
 
 		.copyright {
@@ -70,13 +82,30 @@
 			color: black !important;
 		}
 
+		.a_night {
+			color: white !important;
+		}
+
+		a:visited {
+			color: blue;
+		}
+
 		.a_color {
 			color: deeppink !important;
 		}
 
-		/* .a_color:hover {
+		.a_color:hover {
 			color: black
-		} */
+		}
+
+		.button:hover {
+			background-color: aqua;
+		}
+
+		.button:active {
+			background-color: aqua;
+		}
+
 
 		.change_color {
 			background-color: yellow;
@@ -87,19 +116,15 @@
 </head>
 
 <body id="exp">
-	<!-- <input type="checkbox" id="btnControl" /> -->
-	<!-- <label class="btn" for="btnControl"> -->
 	<div class="wrapper">
 		<div style="display:flex; flex-flow:row;">
-			<img src="sketch.png" width="100px"></img>
-
+			<img id="img" src="sketch.png" width="100px"></img>
 		</div>
 		<div>I am <b style="font-size: 21px">Itamar Chinn</b>, a PhD student in <a id="exp5" class="a"
 				href="https://www.regina.csail.mit.edu">Regina
 				Barzilay's
 				group</a> at <a id="exp6" class="a" href="https://www.csail.mit.edu">MIT's CSAIL</a>. I work on applying
-			machine
-			learning to the life sciences.
+			machine learning to the life sciences.
 			<br>
 			<br>I am especially interested in applying graph neural
 			networks and computer vision to cellular biology, with a particular interest in condensates and
@@ -108,30 +133,57 @@
 		</div>
 		<div style="display:flex;justify-content:space-between">
 			<span style="display:flex;justify-content:flex-start">
-				<a id="exp2" href="https://www.twitter.com/itamarchinn" class="a fa fa-twitter"
+				<a id="exp2" href="https://www.twitter.com/itamarchinn" class="fa fa-twitter"
 					style="text-decoration:none"></a>
-				<a id="exp3" href="https://www.linkedin.com/in/itamarchinn" class="fa fa-linkedin a"
+				<a id="exp3" href="https://www.linkedin.com/in/itamarchinn" class="fa fa-linkedin"
 					style="text-decoration:none"></a>
-				<a id="exp4" href="https://www.github.com/itamarchinn" class="fa fa-github a"
+				<a id="exp4" href="https://www.github.com/itamarchinn" class="fa fa-github"
 					style="text-decoration:none"></a>
 			</span>
 			<button onclick=" changed()">&#129412;</button>
 		</div>
-		<div class="copyright">Itamar Chinn &copy 2022</div>
+		<div id="exp7" class="copyright">Itamar Chinn &copy 2022</div>
 	</div>
 	<!-- </label> -->
 
+	<!-- <script>
+		var night = 19;
+		var morning = 7;
+		var today = new Date().getHours();
+		if (today >= morning && today <= night) {
+			document.getElementById("exp").classList.toggle("body_night");
+			document.getElementById("exp2").classList.toggle("fa_night");
+			document.getElementById("exp3").classList.toggle("fa_night");
+			document.getElementById("exp4").classList.toggle("fa_night");
+			document.getElementById("exp5").classList.toggle("a_night");
+			document.getElementById("exp6").classList.toggle("a_night");
+			document.getElementById("img").src = "sketch.png";
+		} else {
+			document.getElementById("exp").classList.toggle("body_night");
+			document.getElementById("exp2").classList.toggle("fa_night");
+			document.getElementById("exp3").classList.toggle("fa_night");
+			document.getElementById("exp4").classList.toggle("fa_night");
+			document.getElementById("exp5").classList.toggle("a_night");
+			document.getElementById("exp6").classList.toggle("a_night");
+			document.getElementById("img").src = "sketch_white.png";
+		}
+	</script> -->
 	<script>
 		function changed() {
+			if (document.getElementById("img").getAttribute("src") != "sketch.png") {
+				document.getElementById("img").src = "sketch.png";
+			} else {
+				document.getElementById("img").src = "sketch_pink.png";
+			}
 			document.getElementById("exp").classList.toggle("change_color");
 			document.getElementById("exp2").classList.toggle("a_color")
 			document.getElementById("exp3").classList.toggle("a_color")
 			document.getElementById("exp4").classList.toggle("a_color")
 			document.getElementById("exp5").classList.toggle("a_color")
 			document.getElementById("exp6").classList.toggle("a_color")
+			document.getElementById("exp7").classList.toggle("a_color")
 		};
 	</script>
-
 </body>
 </p>
 
