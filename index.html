@@ -67,13 +67,12 @@
 		}
 
 		.a_color {
-			color: blue;
-			text-decoration: underline;
+			color: deeppink !important;
 		}
 
-		.a_color:hover {
+		/* .a_color:hover {
 			color: black
-		}
+		} */
 
 		.change_color {
 			background-color: yellow;
@@ -91,10 +90,10 @@
 			<img src="sketch.png" width="100px"></img>
 
 		</div>
-		<div>I am <b style="font-size: 21px">Itamar Chinn</b>, a PhD student in <a id="exp5"
+		<div>I am <b style="font-size: 21px">Itamar Chinn</b>, a PhD student in <a id="exp5" class="a"
 				href="https://www.regina.csail.mit.edu">Regina
 				Barzilay's
-				group</a> at <a id="exp6" href="https://www.csail.mit.edu">MIT's CSAIL</a>. I work on applying
+				group</a> at <a id="exp6" class="a" href="https://www.csail.mit.edu">MIT's CSAIL</a>. I work on applying
 			machine
 			learning to the life sciences.
 			<br>
@@ -105,12 +104,12 @@
 		</div>
 		<div style="display:flex;justify-content:space-between">
 			<span style="display:flex;justify-content:flex-start">
-				<a id="exp2" href="https://www.twitter.com/itamarchinn" class="fa fa-twitter"
-					style="color:black;text-decoration:none"></a>
-				<a id="exp3" href="https://www.linkedin.com/in/itamarchinn" class="fa fa-linkedin"
-					style="color:black;text-decoration:none"></a>
-				<a id="exp4" href="https://www.github.com/itamarchinn" class="fa fa-github"
-					style="color:black;text-decoration:none"></a>
+				<a id="exp2" href="https://www.twitter.com/itamarchinn" class="a fa fa-twitter"
+					style="text-decoration:none"></a>
+				<a id="exp3" href="https://www.linkedin.com/in/itamarchinn" class="fa fa-linkedin a"
+					style="text-decoration:none"></a>
+				<a id="exp4" href="https://www.github.com/itamarchinn" class="fa fa-github a"
+					style="text-decoration:none"></a>
 			</span>
 			<button onclick=" changed()">&#129412;</button>
 		</div>
@@ -120,24 +119,12 @@
 
 	<script>
 		function changed() {
-			if (!document.getElementById("exp").classList.contains("change_color")) {
-				document.getElementById("exp").classList.add("change_color");
-			} else {
-				document.getElementById("exp").classList.remove("change_color");
-			}
-			if (document.getElementById("exp2").style.color != "deeppink") {
-				document.getElementById("exp2").style["color"] = "deeppink";
-				document.getElementById("exp3").style["color"] = "deeppink";
-				document.getElementById("exp4").style["color"] = "deeppink";
-				document.getElementById("exp5").style["color"] = "deeppink";
-				document.getElementById("exp6").style["color"] = "deeppink";
-			} else {
-				document.getElementById("exp2").style["color"] = "black";
-				document.getElementById("exp3").style["color"] = "black";
-				document.getElementById("exp4").style["color"] = "black";
-				document.getElementById("exp5").style["color"] = "black";
-				document.getElementById("exp6").style["color"] = "black";
-			}
+			document.getElementById("exp").classList.toggle("change_color");
+			document.getElementById("exp2").classList.toggle("a_color")
+			document.getElementById("exp3").classList.toggle("a_color")
+			document.getElementById("exp4").classList.toggle("a_color")
+			document.getElementById("exp5").classList.toggle("a_color")
+			document.getElementById("exp6").classList.toggle("a_color")
 		};
 	</script>
 
