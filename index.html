@@ -16,9 +16,15 @@
 				/* display: flex; */
 			}
 
+			.img_container {
+				display: flex;
+				flex-flow: row;
+			}
+
 			body {
 				padding: 5em 0em 5em 0em !important;
-				width: 80vw;
+				margin: auto auto;
+				width: 100vw;
 				text-align: center;
 			}
 
@@ -56,11 +62,6 @@
 			padding: 1em 1em;
 			max-width: 1000px;
 			margin: 0 auto;
-		}
-
-		.wrapper {
-			height: 100%;
-			width: 100%;
 		}
 
 		img,
@@ -147,8 +148,8 @@
 </head>
 
 <body id="exp">
-	<div class="wrapper">
-		<div class="img_container" style="display:flex; flex-flow:row;">
+	<div>
+		<div class="img_container">
 			<img id="img" src="sketch.png" width="100px"></img>
 		</div>
 		<div>I am <b style="font-size: 21px">Itamar Chinn</b>, a PhD student in <a id="exp5" class="a"
