@@ -138,9 +138,18 @@
 			background-color: yellow;
 			color: deeppink;
 			font-style: bold;
+			/* background-image: url("unicorn.png"); */
+			background-size: 50px;
+			background-repeat: space;
 		}
 
-		.icon_container1 {
+		.change_color2 {
+			background-color: yellow;
+			color: deeppink;
+			font-style: bold;
+		}
+
+		.icon_container {
 			display: "flex" !important;
 			justify-content: "space-between" !important;
 		}
@@ -148,7 +157,7 @@
 </head>
 
 <body id="exp">
-	<div>
+	<div id="exp8">
 		<div class="img_container">
 			<img id="img" src="sketch.png" width="100px"></img>
 		</div>
@@ -172,7 +181,9 @@
 				<a id="exp4" href="https://www.github.com/itamarchinn" class="fa fa-github a"
 					style="text-decoration:none"></a>
 			</span>
-			<button onclick=" changed()">&#129412;</button>
+			<span style="font-size:10px">
+				Do not press the unicorn <button onclick=" changed()"> &#129412;</button>
+			</span>
 		</div>
 		<div id="exp7" class="copyright">Itamar Chinn &copy 2022</div>
 	</div>
@@ -207,6 +218,7 @@
 			} else {
 				document.getElementById("img").src = "sketch_pink.png";
 			}
+			document.getElementById("exp8").classList.toggle("change_color2");
 			document.getElementById("exp").classList.toggle("change_color");
 			document.getElementById("exp2").classList.toggle("a_color")
 			document.getElementById("exp3").classList.toggle("a_color")
