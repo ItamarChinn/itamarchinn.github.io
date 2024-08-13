@@ -1,0 +1,265 @@
+<html>
+
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		@media screen and (max-width: 600px) {
+			html {
+				padding: 0;
+				margin: 0;
+			}
+
+			img {
+				/* width: 50%%; */
+				/* display: flex; */
+			}
+
+			.img_container {
+				display: flex;
+				flex-flow: row;
+			}
+
+			body {
+				padding: 0.5em !important;
+				margin: auto auto;
+				width: 95vw;
+				text-align: center;
+			}
+
+			.body_left {
+				text-align: left;
+			}
+
+			div {
+				justify-content: center;
+				align-items: center;
+			}
+
+			.copyright {
+				text-align: center;
+				display: flex;
+				justify-content: center;
+			}
+
+		}
+
+		body {
+			/* display: flex; */
+			padding: 5em;
+			background-color: #FAF9F6;
+			font-family: Palatino;
+			font-size: 20px;
+		}
+
+		.body_night {
+			display: flex;
+			padding: 5em;
+			background-color: #000000a0;
+			font-family: Palatino;
+			font-size: 20px;
+			color: #FAF9F6;
+		}
+
+		div {
+			padding: 1em 1em;
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		img,
+		small {
+			display: block;
+		}
+
+		.fa {
+			padding: 0px;
+			font-size: 20px;
+			width: 25px;
+			text-align: center;
+			text-decoration: none;
+			color: black;
+		}
+
+		.fa_night {
+			padding: 0px;
+			font-size: 20px;
+			width: 25px;
+			text-align: center;
+			text-decoration: none;
+			color: #FAF9F6 !important;
+		}
+
+		.copyright {
+			font-size: 10px;
+			color: #999;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+		}
+
+		a:link {
+			color: black;
+			text-decoration: underline;
+		}
+
+		a:hover {
+			color: deeppink !important;
+			/* text-decoration: none; */
+		}
+
+		.a {
+			color: black !important;
+		}
+
+		.a_night {
+			color: white !important;
+		}
+
+		a:visited {
+			color: blue;
+		}
+
+		.a_color {
+			color: deeppink !important;
+		}
+
+		.a_color:hover {
+			color: black
+		}
+
+		.button:hover {
+			background-color: aqua;
+		}
+
+		.button:active {
+			background-color: aqua;
+		}
+
+
+		.change_color {
+			background-color: yellow;
+			color: deeppink;
+			font-style: bold;
+			/* background-image: url("unicorn.png"); */
+			background-size: 50px;
+			background-repeat: space;
+		}
+
+		.change_color2 {
+			background-color: yellow;
+			color: deeppink;
+			font-style: bold;
+		}
+
+		.icon_container {
+			display: "flex" !important;
+			justify-content: "space-between" !important;
+		}
+	</style>
+</head>
+
+<body id="exp">
+	<div id="exp8">
+		<div class="img_container">
+			<img id="img" src="sketch.png" width="100px"></img>
+		</div>
+		<h3>Problems I work on:</h3>
+			<ul>
+				<li class="body_left">Designing enzymes for any reaction
+					<ul class="body_left">
+						<li>Finding enzymes in nature</li>
+						<li>Protein generation methods for designing enzymes</li>
+						<li>Understanding what happens when you perturb metabolic networks</li>
+					</ul>
+				</li>
+				<li class="body_left">Condensate Biology
+					<ul class="body_left">
+						<li>Designing disordered proteins that localize in specific condensates</li>
+					</ul>
+				</li>
+			</ul>
+			<!-- <br> -->
+			<h3>ML x bio things I am excited about:</h3>
+			<ul class="body_left">
+				<li class="body_left">Enzymes that can do completely novel chemistry</li>
+				<li class="body_left">Condensate biology</li>
+				<li class="body_left">Diffusion models and flow matching for protein design</li>
+				<li class="body_left">MD and DFT</li>
+				<li class="body_left">AI Scientists (AKA LLM agents for science)</li>
+
+			</ul>
+			<!-- <br> -->
+			<h3>Other things I like:</h3>
+			<ul class="body_left">
+				<li class="body_left">The biotech industry</li>
+				<li class="body_left">Coffee</li>
+				<li class="body_left">Molecular cooking</li>
+				<li class="body_left">AI for the law</li>
+				<li class="body_left">Productivity software</li>
+			</ul>
+		</div>
+			<div style="text-align: center;">
+				<a href="more_stuff.html">Less stuff</a>
+			</div>
+		<div class="icon_container" style="display:flex;justify-content:space-between;">
+			<span>
+				<a id="exp3" href="https://www.linkedin.com/in/itamarchinn" class="fa fa-linkedin a"
+					style="text-decoration:none"></a>
+				<a id="exp2" href="https://twitter.com/Itamarchinn" class="fa fa-twitter a"
+					style="text-decoration:none"></a>
+				<a id="exp4" href="https://github.com/ItamarChinn" class="fa fa-github a"
+					style="text-decoration:none"></a>
+			</span>
+			<span style="font-size:10px">
+				Do not press the unicorn <button onclick=" changed()"> &#129412;</button>
+			</span>
+		</div>
+		<div id="exp7" class="copyright">Itamar Chinn &copy 2024</div>
+	</div>
+	<!-- </label> -->
+
+	<!-- <script>
+		var night = 19;
+		var morning = 7;
+		var today = new Date().getHours();
+		if (today >= morning && today <= night) {
+			document.getElementById("exp").classList.toggle("body_night");
+			document.getElementById("exp2").classList.toggle("fa_night");
+			document.getElementById("exp3").classList.toggle("fa_night");
+			document.getElementById("exp4").classList.toggle("fa_night");
+			document.getElementById("exp5").classList.toggle("a_night");
+			document.getElementById("exp6").classList.toggle("a_night");
+			document.getElementById("img").src = "sketch.png";
+		} else {
+			document.getElementById("exp").classList.toggle("body_night");
+			document.getElementById("exp2").classList.toggle("fa_night");
+			document.getElementById("exp3").classList.toggle("fa_night");
+			document.getElementById("exp4").classList.toggle("fa_night");
+			document.getElementById("exp5").classList.toggle("a_night");
+			document.getElementById("exp6").classList.toggle("a_night");
+			document.getElementById("img").src = "sketch_white.png";
+		}
+	</script> -->
+	<script>
+		function changed() {
+			if (document.getElementById("img").getAttribute("src") != "sketch.png") {
+				document.getElementById("img").src = "sketch.png";
+			} else {
+				document.getElementById("img").src = "sketch_pink.png";
+			}
+			document.getElementById("exp8").classList.toggle("change_color2");
+			document.getElementById("exp").classList.toggle("change_color");
+			document.getElementById("exp2").classList.toggle("a_color")
+			document.getElementById("exp3").classList.toggle("a_color")
+			document.getElementById("exp4").classList.toggle("a_color")
+			document.getElementById("exp5").classList.toggle("a_color")
+			document.getElementById("exp6").classList.toggle("a_color")
+			document.getElementById("exp7").classList.toggle("a_color")
+		};
+	</script>
+</body>
+</p>
+
+</html>
